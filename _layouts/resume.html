@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.data.resume.meta.name }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+</head>
+<body>
+<header>
+  <h1>{{ site.data.resume.meta.name }}</h1>
+  <p>{{ site.data.resume.meta.title }}</p>
+  <p><a href="mailto:{{ site.data.resume.meta.email }}">{{ site.data.resume.meta.email }}</a> — {{ site.data.resume.meta.location }}</p>
+</header>
+
+<main>
+  <section>
+    <h2>Περίληψη</h2>
+    <p>{{ site.data.resume.summary }}</p>
+  </section>
+</main>
+
+<footer>
+  {% include webring.html %}
+</footer>
+</body>
+</html>
