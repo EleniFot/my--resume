@@ -1,0 +1,17 @@
+<nav class="webring">
+  <a href="https://hci-iv-2025.github.io/webring/">WeBring Home</a> |
+  <a id="prev-link" href="#">‹ Previous</a> |
+  <a id="next-link" href="#">Next ›</a>
+</nav>
+
+<script src="https://hci-iv-2025.github.io/webring/js/index.js"></script>
+<script>
+  const myId = 'yourid'; // replace with your ID
+  const idx = members.findIndex(m => m.id === myId);
+  if (idx !== -1) {
+    const prev = members[(idx - 1 + members.length) % members.length];
+    const next = members[(idx + 1) % members.length];
+    document.getElementById('prev-link').href = prev.url;
+    document.getElementById('next-link').href = next.url;
+  }
+</script>
